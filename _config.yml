@@ -1,1 +1,25 @@
-theme: jekyll-theme-modernist
+# Dependencies
+markdown:         redcarpet
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            techblitz.io
+tagline:          'Tech matter you care about ingested in < 5 minutes per post.'
+description:      'A collection of topics ranging from software development practice to emerging trends and technology.  Authored by <a href="https://twitter.com/fastnsilver" target="_blank">@fastnsilver</a>.'
+url:              http://techblitz.io
+
+author:
+  name:           'Chris Phillipson'
+  url:            https://twitter.com/fastnsilver
+
+plugins:          [jekyll-paginate]
+paginate:         5
+
+# Custom vars
+version:          1.0
+
+github:
+  repo:           https://github.com/fastnsilver
