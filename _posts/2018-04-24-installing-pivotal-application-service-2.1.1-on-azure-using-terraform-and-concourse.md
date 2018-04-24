@@ -11,6 +11,7 @@ Pivotal Application Service (PAS) 2.1 was [released](https://content.pivotal.io/
 * Signup for 
     * an [Azure account](https://signup.azure.com/signup)
     * a [Pivotal Network account](https://account.run.pivotal.io/z/uaa/sign-up)
+* Download and install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 * [Create a parent Azure DNS Zone](https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-portal#create-a-dns-zone)
 * [Create 'A' records](https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-portal#create-a-dns-record) for Concourse, Jenkins, Sonarqube, and Artifactory
 * [Spin up an Ubuntu 16.04 VM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)
@@ -22,7 +23,7 @@ Pivotal Application Service (PAS) 2.1 was [released](https://content.pivotal.io/
 
 * [Install Terraform](https://www.terraform.io/downloads.html)
 * Download and unpack [Terraform scripts for PCF on Azure](https://github.com/pivotal-cf/terraforming-azure/archive/v0.11.0.zip)
-    * Follow the instructions for creating an automation account, seeding a `terraform.tfvars` file with the appropriate variables, and standing up an environment
+    * Follow the [instructions](https://github.com/pivotal-cf/terraforming-azure#how-does-one-use-this) for creating an automation account, seeding a `terraform.tfvars` file with the appropriate variables, and standing up an environment
 
 Here's a sample `terraform.tfvars` (you would of course need to replace values)
 
