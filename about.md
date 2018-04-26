@@ -3,10 +3,8 @@ layout: page
 title: About
 ---
 
-## Me
+Chris Phillipson is a Platform Architect at [Pivotal](https://www.pivotal.io).
 
-I'm a Platform Architect at [Pivotal](https://www.pivotal.io).
-
-More about me [here](https://www.visualcv.com/chris-phillipson).
+More about him [here](https://www.visualcv.com/chris-phillipson).
 
 Thanks for reading!
