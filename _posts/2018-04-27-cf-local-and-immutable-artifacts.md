@@ -13,11 +13,11 @@ A droplet is basically a tarball of compiled application code stored in a blob s
 
 How does it get created? 
 
-When you execute a `cf push` the CLI tells the Cloud Controller to create an application record.  Next it stores the application metadata (information typically drawn from a `manifest.yml` and/or CLI parameters). Before uploading the application files it does a resource match, and omits files that exist the resource cache.  The uploaded application files are combined with files from the resource cache to create an application package.  This package, known as a droplet, is stored in a blobstore.
+When you execute a `cf push` the CLI tells the Cloud Controller to create an application record.  Next it stores the application metadata (information typically drawn from a `manifest.yml` and/or CLI parameters). Before uploading the application files it does a resource match, and omits files that exist in the resource cache.  The uploaded application files are combined with files from the resource cache to create an application package.  This package, known as a droplet, is stored in the blobstore.
 
 <h2>Why not just cf push?</h2>
 
-A blobstore is provisioned for use by a single foundation. So, if you are an organization maintaining multiple foundations, does it make sense to create separate droplets for the same code release? Why couldn't you simply manage and deploy from a single repository of versioned artifacts? 
+A blobstore is provisioned for use by a single foundation. So, if you are an organization maintaining multiple foundations, does it make sense to create separate droplets for the same code release? Why wouldn't you simply manage and deploy from a single repository of versioned artifacts? 
 
 <h2>A way forward?</h2>
 
