@@ -1,6 +1,9 @@
 ---
 layout: post
 title: From the ashes
+date: 2018-04-18
+summary: Humble new beginnings
+logo: fire
 ---
 
 It's taken me about 15 years to get back to blogging.  

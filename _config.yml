@@ -1,25 +1,59 @@
-# Dependencies
-#markdown:         redcarpet
-highlighter:      rouge
+# Site wide configuration
+title: techblitz.io
+tagline: 'Tech matter you care about ingested in < 5 minutes per post.'
+description: 'A collection of topics ranging from software development practice to emerging trends and technology. Authored by <a href="mailto:fastnsilver@gmail.com" target="_blank">Chris Phillipson</a>.'
+url:  http://techblitz.io
+date_format: '%B %d, %Y'
+fort_awesome_icon: 'tachometer'
 
-# Permalinks
-permalink:        pretty
+# Owner configuration
+# name and email are required (change code to remove these)
+# (leave the rest blank to disable the corresponding sharing button)
+owner:
+    name: Chris Phillipson
+    email: fastnsilver@gmail.com
+    github: fastnsilver
+    twitter: fastnsilver
+    linkedin: cphillipson
+    facebook: 
+    google_plus: 
+    youtube:
 
-# Setup
-title:            techblitz.io
-tagline:          'Tech matter you care about ingested in < 5 minutes per post.'
-description:      'A collection of topics ranging from software development practice to emerging trends and technology. <br/><br/>Authored by <a href="https://twitter.com/fastnsilver" target="_blank">@fastnsilver</a>.'
-url:              http://techblitz.io
+# Post sharing icons
+sharing:
+    twitter: true
+    linkedin: true
+    facebook: true
+    google_plus: true
+    reddit: true
 
-author:
-  name:           'Chris Phillipson'
-  url:            https://twitter.com/fastnsilver
+# Disqus comments configuration (leave blank to disable comments)
+disqus_shortname: 'techblitz'
 
-plugins:          [jekyll-paginate]
-paginate:         5
+# Jekyll configuration
+#permalink: /:year/:month/:day/:title/
+permalink: pretty
+paginate: 4
 
-# Custom vars
-version:          1.0
+# Markdown
+#markdown: redcarpet
+highlighter: rouge
 
-github:
-  repo:           https://github.com/fastnsilver
+# Enable when using redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data', 'footnotes']
+
+# Enable when using kramdown (you will need to use ~~~ instead of ```)
+# kramdown:
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   use_coderay: false
+
+# Gems
+plugins: ['jekyll-paginate']
+
+# Exclude
+exclude: ['README.md']
+

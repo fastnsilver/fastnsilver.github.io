@@ -1,12 +1,16 @@
 ---
 layout: post
 title: Installing Pivotal Application Service 2.1.1 on Azure using Terraform and Concourse
+date: 2018-04-24
+summary: How to get PAS 2.1 up and running on Azure with Terraform and Concourse and keep it up to date
+logo: industry
+categories: PCF
 ---
 
 Pivotal Application Service (PAS) 2.1 was [released](https://content.pivotal.io/slides/pivotal-cloud-foundry-2-1-making-transformation-real-webinar) just recently and I wanted to take it for a spin on Azure.  I started [here](https://docs.pivotal.io/pivotalcf/2-1/customizing/azure.html), and chose this [path](https://docs.pivotal.io/pivotalcf/2-1/customizing/azure-terraform.html).  I also spun up an instance of [Concourse](https://concourse-ci.org) and configured some [pipelines](https://github.com/pivotal-cf/pcf-pipelines) to  expedite installation of other tiles and to help me keep PAS up-to-date.
 
 
-<h2>Getting Started</h2>
+## Getting Started
 
 * Signup for 
     * an [Azure account](https://signup.azure.com/signup)
@@ -19,7 +23,7 @@ Pivotal Application Service (PAS) 2.1 was [released](https://content.pivotal.io/
 * [Download](https://github.com/fastnsilver/jenky/archive/master.zip), unpack, and install [Jenky](https://github.com/fastnsilver/jenky/tree/master/compose), then exit the VM
 
 
-<h2>Installing Operations Manager</h2>
+## Installing Operations Manager
 
 * [Install Terraform](https://www.terraform.io/downloads.html)
 * Download and unpack [Terraform scripts for PCF on Azure](https://github.com/pivotal-cf/terraforming-azure/archive/v0.11.0.zip)
@@ -45,7 +49,7 @@ I took care to capture the output from `terraform apply plan`.
 Lastly, I visited the Azure Portal and added an NS record to the parent zone `cloudclown.io` by copying the NS details from the `pas.cloudclown.io` child-zone.
 
 
-<h2>Deploying Operations Director</h2>
+## Deploying Operations Director
 
 I stepped through the instructions [here](https://docs.pivotal.io/pivotalcf/2-1/customizing/azure-om-config-terraform.html).
 
@@ -69,7 +73,7 @@ field values should not be taken straight from the screenshots in the documentat
 Before clicking `Apply Changes`, I adjusted the `Resource Config` to create only two instances of `Master Compilation Job`.
 
 
-<h2>Installing PAS</h2>
+## Installing PAS
 
 Here's where I cheated a bit.  
 
