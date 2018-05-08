@@ -18,7 +18,7 @@ layout: default
         <span>
             <time datetime="{{ page.date | date_to_xmlschema }}">
                 {{ page.date | date: site.date_format }}
-                {% if site.disqus_shortname %}
+                {% if page.comments %}
                     &middot;
                     <a href="{{ site.url }}{{ page.url }}index.html#disqus_thread" data-disqus-identifier="{{ page.url }}"></a>
                     {% if page.update_date %}
