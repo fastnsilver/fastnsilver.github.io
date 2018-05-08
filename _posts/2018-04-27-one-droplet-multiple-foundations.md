@@ -5,6 +5,7 @@ date: 2018-04-27
 summary: Thoughts on droplet management across multiple foundations
 logo: tint
 categories: PCF
+comments: true
 ---
 
 I had an occasion to play with [cf local](https://github.com/cloudfoundry-incubator/cflocal). 

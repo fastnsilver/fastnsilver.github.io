@@ -5,6 +5,7 @@ date: 2018-04-24
 summary: How to get PAS 2.1 up and running on Azure with Terraform and Concourse and keep it up to date
 logo: industry
 categories: PCF
+comments: true
 ---
 
 Pivotal Application Service (PAS) 2.1 was [released](https://content.pivotal.io/slides/pivotal-cloud-foundry-2-1-making-transformation-real-webinar) just recently and I wanted to take it for a spin on Azure.  I started [here](https://docs.pivotal.io/pivotalcf/2-1/customizing/azure.html), and chose this [path](https://docs.pivotal.io/pivotalcf/2-1/customizing/azure-terraform.html).  I also spun up an instance of [Concourse](https://concourse-ci.org) and configured some [pipelines](https://github.com/pivotal-cf/pcf-pipelines) to  expedite installation of other tiles and to help me keep PAS up-to-date.
