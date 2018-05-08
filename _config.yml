@@ -28,7 +28,7 @@ sharing:
     reddit: true
 
 # Disqus comments configuration (leave blank to disable comments)
-disqus_shortname: 'techblitz_io'
+disqus_shortname: 'techblitz-io'
 
 # Jekyll configuration
 #permalink: /:year/:month/:day/:title/
