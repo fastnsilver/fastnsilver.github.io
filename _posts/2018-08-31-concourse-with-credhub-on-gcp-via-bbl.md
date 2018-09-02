@@ -3,7 +3,7 @@ layout: post
 title: Concourse with Credhub on Google Cloud Platform via BOSH Boot Loader
 date: 2018-08-31
 summary: Integrated credential management with a CI/CD pipeline automation engine
-logo: industry
+logo: fighter-jet
 categories: Concourse
 comments: true
 ---
