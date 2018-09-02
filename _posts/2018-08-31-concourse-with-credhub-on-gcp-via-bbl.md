@@ -10,7 +10,7 @@ comments: true
 
 [Concourse 4.1](https://concourse-ci.org/download.html#v410) was recently released so I figured I'd take [bbl](https://github.com/cloudfoundry/bosh-bootloader) for a spin and stand up a secure cluster integrated with [Credhub](https://github.com/cloudfoundry-incubator/credhub) on Google's [cloud](https://cloud.google.com).  
 
-Thinking about the level of effort it takes to stand up and operate such a cluster, whether in an on-premise data center or in the cloud, and the tool choices I have as a DevOps practitioner, I gravitated toward [BOSH](https://bosh.io/docs/). BOSH is amazing at provisioning and deploying software. It's lifecycle responsibilities doesn't stop there, it also performs monitoring, failure recovery, and software updates with zero to minimal downtime.
+Thinking about the level of effort it takes to stand up and operate such a cluster, whether in an on-premise data center or in the cloud, and the tool choices I have as a DevOps practitioner, I gravitated toward [BOSH](https://bosh.io/docs/). BOSH is amazing at provisioning and deploying software. It's lifecycle responsibilities don't stop there, it also performs monitoring, failure recovery, and software updates with zero to minimal downtime.
 
 Why would one use **bbl**?  Well, it simplifies standing up BOSH on AWS, Azure, GCP, vSphere, or Openstack. You'll see just how it does that in a few moments.
 
@@ -83,7 +83,7 @@ bosh deployments
 
 ## Deploying Concourse
 
-Feeling confident I was ready to take the next few steps. I needed to capture the load balancer IP address that had also been created, so I set a few more environment variables
+Feeling confident, I was ready to take the next few steps. I needed to capture the load balancer IP address that had also been created, so I set a few more environment variables
 
 ```
 export BOSH_NON_INTERACTIVE=true
@@ -120,7 +120,7 @@ When I came back in 10-15 minutes I saw 3 additional VMs in my Google Cloud cons
 
 ## Interacting with Concourse and Credhub
 
-I had a choice to make.  I could connect to Concourse via (a) a browser or (b) the [fly](https://concourse-ci.org/fly.html) client by logging in with local user credentails.
+I had a choice to make.  I could connect to Concourse via (a) a browser or (b) the [fly](https://concourse-ci.org/fly.html) client by logging in with local user credentials.
 
 Quite happy to stay at the command-line, I fetched the fly client, installed it, and logged in with
 
@@ -133,7 +133,7 @@ fly -t <alias> login -c $CONCOURSE_URL -k -u <username> -p <password>
 
 Next I took a look [here](https://github.com/pivotal-cf/pcf-pipelines/blob/master/docs/credhub-integration.md#-adding-secrets-to-credhub) and [here](https://github.com/pivotal-cf/pcf-pipelines/blob/master/docs/credhub-integration.md#sample-pipeline) for how to set up a simple pipeline that consumed secrets from Credhub.  
 
-The beautiful result of all my prior efforts was that I actually had two instances of Credhub, one integrated with BOSH Director and the other with Concourse. But how do I connect to the latter?  That's where the `concourse-credhub` repository had me covered with another script, `target-concourse-cedhub.sh`.
+The beautiful result of all my prior efforts was that I actually had two instances of Credhub, one integrated with BOSH Director and the other with Concourse. But how do I connect to the latter?  That's where the `concourse-credhub` repository had me covered with another script, `target-concourse-credhub.sh`.
 
 ```
 source target-concourse-credhub.sh
@@ -151,6 +151,7 @@ Likely you'll want to save some money and not have this running 24x7.  To reap y
 
 ```
 bbl destroy --gcp-service-account-key $BBL_GCP_SERVICE_ACCOUNT_KEY
+bbl cleanup-leftovers --gcp-service-account-key $BBL_GCP_SERVICE_ACCOUNT_KEY
 ```
 
 ## Final thoughts
